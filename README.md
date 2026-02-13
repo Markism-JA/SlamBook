@@ -1,17 +1,11 @@
-# advmobprog_prelims_tp02_amarille
+# SlamBook Application
 
-A new Flutter project.
+This is an application I did for my class in Advance Mobile Programming. This is a static application where it displays a set of information based on the `friend.json` file in `assets/data/`.
 
-## Getting Started
+I managed to explore flutter here and get the general gist on how this framework methodology works in how it treats the creation of an application.
 
-This project is a starting point for a Flutter application.
+## Showcase
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Marky's Page | Ron's Page |
+| :---: | :---: |
+| <img src="app-showcase/Showcase1.png" width="400"> | <img src="app-showcase/Showcase2.png" width="400"> |
