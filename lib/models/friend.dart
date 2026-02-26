@@ -16,6 +16,8 @@ class Friend {
   final String movie;
   final String movieImage;
   final String hobby;
+  final String selfie1;
+  final String selfie2;
 
   Friend({
     required this.name,
@@ -32,6 +34,8 @@ class Friend {
     required this.movie,
     required this.movieImage,
     required this.hobby,
+    required this.selfie1,
+    required this.selfie2,
   });
 
   factory Friend.fromJson(Map<String, dynamic> json) {
@@ -57,6 +61,8 @@ class Friend {
       movie: json['movie'] ?? 'None',
       movieImage: json['movieImage'] ?? '',
       hobby: json['hobby'] ?? 'N/A',
+      selfie1: json['selfie1'] ?? '',
+      selfie2: json['selfie2'] ?? '',
     );
   }
 }
