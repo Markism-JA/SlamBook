@@ -16,100 +16,127 @@ class FriendSlamCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color(0xFFA7D2B7),
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: const Color(0xFF2C2C2C), width: 2.5),
-        boxShadow: const [
-          BoxShadow(color: Colors.black26, offset: Offset(6, 6), blurRadius: 4),
-        ],
-      ),
-      margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
-      clipBehavior: Clip.hardEdge,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        bool isMobile = constraints.maxWidth < 600;
 
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 16),
-              margin: const EdgeInsets.only(bottom: 24),
-              decoration: BoxDecoration(
-                color: const Color(0xFFFFFDF7).withOpacity(0.3),
-                border: Border.all(color: const Color(0xFFEF9A9A), width: 3),
-                borderRadius: BorderRadius.circular(12),
+        return Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFFA7D2B7),
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(color: const Color(0xFF2C2C2C), width: 2.5),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black26,
+                offset: Offset(6, 6),
+                blurRadius: 4,
               ),
-              child: Text(
-                'ALL ABOUT ${friend.nickname.toUpperCase()}',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.permanentMarker(
-                  fontSize: 28,
-                  color: const Color(0xFF2C2C2C),
-                  shadows: [
-                    const Shadow(offset: Offset(2, 2), color: Colors.white),
-                  ],
-                ),
-              ),
-            ),
-
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: Column(
-                    children: [
-                      PortraitSection(
-                        fullName: friend.name,
-                        nickname: friend.nickname,
-                        imagePath: friend.imageUrl,
-                        birthday: friend.birthday,
-                        age: friend.age,
+            ],
+          ),
+          margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+          clipBehavior: Clip.hardEdge,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    margin: const EdgeInsets.only(bottom: 24),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFFFFDF7).withOpacity(0.3),
+                      border: Border.all(
+                        color: const Color(0xFFEF9A9A),
+                        width: 3,
                       ),
-                      const SizedBox(height: 16),
-                      ZodiacSection(zodiac: friend.zodiacSign),
-                      const SizedBox(height: 16),
-                      HobbySection(hobby: friend.hobby),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Text(
+                      'ALL ABOUT ${friend.nickname.toUpperCase()}',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.permanentMarker(
+                        fontSize: 28,
+                        color: const Color(0xFF2C2C2C),
+                      ),
+                    ),
+                  ),
+
+                  Flex(
+                    direction: isMobile ? Axis.vertical : Axis.horizontal,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildResponsiveChild(
+                        isMobile: isMobile,
+                        child: Column(
+                          children: [
+                            PortraitSection(
+                              fullName: friend.name,
+                              nickname: friend.nickname,
+                              imagePath: friend.imageUrl,
+                              birthday: friend.birthday,
+                              age: friend.age,
+                            ),
+                            const SizedBox(height: 16),
+                            ZodiacSection(zodiac: friend.zodiacSign),
+                            const SizedBox(height: 16),
+                            HobbySection(hobby: friend.hobby),
+                          ],
+                        ),
+                      ),
+
+                      SizedBox(
+                        width: isMobile ? 0 : 16,
+                        height: isMobile ? 16 : 0,
+                      ),
+
+                      _buildResponsiveChild(
+                        isMobile: isMobile,
+                        child: Column(
+                          children: [
+                            FavColorSection(
+                              favColor: friend.favColor,
+                              colorName: friend.favColor.colorName,
+                            ),
+                            const SizedBox(height: 16),
+                            FavFoodSection(
+                              foodName: friend.food,
+                              imagePath: friend.foodImagePath,
+                            ),
+                            const SizedBox(height: 16),
+                            MediaSection(
+                              title: friend.movie,
+                              imagePath: friend.movieImage,
+                              rotation: -0.02,
+                            ),
+                            const SizedBox(height: 16),
+                            MediaSection(
+                              title: friend.song,
+                              imagePath: friend.songImagePath,
+                              rotation: 0.02,
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
-                ),
-
-                const SizedBox(width: 16),
-
-                Expanded(
-                  child: Column(
-                    children: [
-                      FavColorSection(
-                        favColor: friend.favColor,
-                        colorName: friend.favColor.colorName,
-                      ),
-                      const SizedBox(height: 16),
-                      FavFoodSection(
-                        foodName: friend.food,
-                        imagePath: friend.foodImagePath,
-                      ),
-                      const SizedBox(height: 16),
-                      MediaSection(
-                        title: friend.movie,
-                        imagePath: friend.movieImage,
-                        rotation: -0.02,
-                      ),
-                      const SizedBox(height: 16),
-                      MediaSection(
-                        title: friend.song,
-                        imagePath: friend.songImagePath,
-                        rotation: 0.02,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
+  }
+
+  Widget _buildResponsiveChild({
+    required bool isMobile,
+    required Widget child,
+  }) {
+    if (isMobile) {
+      return SizedBox(width: double.infinity, child: child);
+    }
+    return Expanded(child: child);
   }
 }

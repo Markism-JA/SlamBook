@@ -1,5 +1,7 @@
 import 'dart:ui';
 import 'package:advmobprog_midterms_tp02_amarille/widgets/grid_painter.dart';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,7 +10,7 @@ import 'models/friend.dart';
 import 'widgets/friend_slam_card.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(DevicePreview(enabled: !kReleaseMode, builder: (context) => MyApp()));
 }
 
 class DesktopScrollBehavior extends MaterialScrollBehavior {
