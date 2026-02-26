@@ -1,9 +1,9 @@
 import 'dart:ui';
-import 'package:advmobprog_prelims_tp02_amarille/widgets/grid_painter.dart';
+import 'package:advmobprog_midterms_tp02_amarille/widgets/grid_painter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:advmobprog_prelims_tp02_amarille/services/slam_data_services.dart';
+import 'package:advmobprog_midterms_tp02_amarille/services/slam_data_services.dart';
 import 'models/friend.dart';
 import 'widgets/friend_slam_card.dart';
 

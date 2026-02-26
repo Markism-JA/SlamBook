@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:advmobprog_prelims_tp02_amarille/main.dart';
+import 'package:advmobprog_midterms_tp02_amarille/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

@@ -1,4 +1,4 @@
-package com.example.advmobprog_prelims_tp02_amarille
+package advmobprog_midterms_tp02_amarille
 
 import io.flutter.embedding.android.FlutterActivity
 
