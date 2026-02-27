@@ -13,7 +13,9 @@
         "songImagePath": "assets/images/mark/song.png",
         "movie": "My Hero Academia",
         "movieImage": "assets/images/mark/movie.png",
-        "hobby": "Reading!!!!"
+        "hobby": "Reading!!!!",
+        "selfie1": "assets/images/mark/selfie1.jpg",
+        "selfie2": "assets/images/mark/selfie2.jpg"
     },
     {
         "name": "Ron Sherwin Bugarin",
@@ -29,7 +31,9 @@
         "songImagePath": "assets/images/ron/song.png",
         "movie": "Evangelion 3.0+1.11 Thrice upon a Time",
         "movieImage": "assets/images/ron/movie.jpg",
-        "hobby": "Gaming"
+        "hobby": "Gaming",
+        "selfie1": "assets/images/ron/selfie1.jpg",
+        "selfie2": "assets/images/ron/selfie2.jpg"
     },
     {
         "name": "Angelo Delos Santos Iyo",
@@ -45,7 +49,9 @@
         "songImagePath": "assets/images/iyo/song.png",
         "movie": "Green Mile",
         "movieImage": "assets/images/iyo/movie.png",
-        "hobby": "Gaming"
+        "hobby": "Gaming",
+        "selfie1": "assets/images/iyo/selfie1.jpg",
+        "selfie2": "assets/images/iyo/selfie2.jpg"
     },
     {
         "name": "John Andrei Dimasaka",
@@ -61,7 +67,9 @@
         "songImagePath": "assets/images/andrei/song.png",
         "movie": "Goodfellas",
         "movieImage": "assets/images/andrei/movie.jpg",
-        "hobby": "Gaming"
+        "hobby": "Gaming",
+        "selfie1": "assets/images/andrei/selfie1.jpg",
+        "selfie2": "assets/images/andrei/selfie2.jpg"
     },
     {
         "name": "Lenardo Jualo",
@@ -77,6 +85,8 @@
         "songImagePath": "assets/images/jualo/song.png",
         "movie": "One Piece",
         "movieImage": "assets/images/jualo/movie.jpg",
-        "hobby": "Gaming"
+        "hobby": "Gaming",
+        "selfie1": "assets/images/jualo/selfie1.jpg",
+        "selfie2": "assets/images/jualo/selfie2.jpg"
     }
 ]

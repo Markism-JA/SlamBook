@@ -70,7 +70,6 @@ class FriendSlamCard extends StatelessWidget {
                             ),
                           ),
                         ),
-
                         Flex(
                           direction: isMobile ? Axis.vertical : Axis.horizontal,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -95,17 +94,16 @@ class FriendSlamCard extends StatelessWidget {
                                     GroupSelfieSection(
                                       imagePath: friend.selfie1,
                                       rotation: -0.02,
+                                      label: "Fav Photo",
                                     ),
                                   ],
                                 ],
                               ),
                             ),
-
                             SizedBox(
                               width: isMobile ? 0 : 20,
                               height: isMobile ? 20 : 0,
                             ),
-
                             _buildResponsiveChild(
                               isMobile: isMobile,
                               child: Column(
@@ -136,6 +134,7 @@ class FriendSlamCard extends StatelessWidget {
                                     GroupSelfieSection(
                                       imagePath: friend.selfie2,
                                       rotation: 0.02,
+                                      label: "Gala",
                                     ),
                                   ],
                                 ],
@@ -143,7 +142,6 @@ class FriendSlamCard extends StatelessWidget {
                             ),
                           ],
                         ),
-
                         if (isMobile) ...[
                           const SizedBox(height: 30),
                           Divider(
@@ -159,11 +157,13 @@ class FriendSlamCard extends StatelessWidget {
                           GroupSelfieSection(
                             imagePath: friend.selfie1,
                             rotation: -0.01,
+                            label: "Fav Photo",
                           ),
                           const SizedBox(height: 20),
                           GroupSelfieSection(
                             imagePath: friend.selfie2,
                             rotation: 0.01,
+                            label: "Gala",
                           ),
                         ],
                       ],
