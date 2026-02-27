@@ -54,7 +54,9 @@ class FriendSlamCard extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(vertical: 16),
                           margin: const EdgeInsets.only(bottom: 24),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFFFFDF7).withOpacity(0.3),
+                            color: const Color(
+                              0xFFFFFDF7,
+                            ).withValues(alpha: 0.3),
                             border: Border.all(
                               color: const Color(0xFFEF9A9A),
                               width: 3,
@@ -145,7 +147,7 @@ class FriendSlamCard extends StatelessWidget {
                         if (isMobile) ...[
                           const SizedBox(height: 30),
                           Divider(
-                            color: Colors.black.withOpacity(0.1),
+                            color: Colors.black.withValues(alpha: 0.1),
                             thickness: 2,
                           ),
                           const SizedBox(height: 10),

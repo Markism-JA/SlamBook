@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: IgnorePointer(
               child: CustomPaint(
                 painter: GridPainter(
-                  gridColor: Colors.lightBlue.withOpacity(0.15),
+                  gridColor: Colors.lightBlue.withValues(alpha: 0.15),
                   spacing: 24.0,
                 ),
               ),
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 150,
                   height: 150,
                   decoration: BoxDecoration(
-                    color: headerPink.withOpacity(0.5),
+                    color: headerPink.withValues(alpha: 0.5),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 200,
                   height: 200,
                   decoration: BoxDecoration(
-                    color: sageGreen.withOpacity(0.4),
+                    color: sageGreen.withValues(alpha: 0.4),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -242,7 +242,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               left: 10,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.7),
+                                  color: Colors.white.withValues(alpha: 0.7),
                                   shape: BoxShape.circle,
                                 ),
                                 child: IconButton(
@@ -258,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               right: 10,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withOpacity(0.7),
+                                  color: Colors.white.withValues(alpha: 0.7),
                                   shape: BoxShape.circle,
                                 ),
                                 child: IconButton(

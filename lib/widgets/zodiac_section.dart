@@ -32,7 +32,7 @@ class ZodiacSection extends StatelessWidget {
             ),
             child: SlamGridWrapper(
               spacing: 10,
-              meshColor: Colors.black.withOpacity(0.05),
+              meshColor: Colors.black.withValues(alpha: 0.05),
               child: Center(
                 child: Text(
                   "ZODIAC SIGN",

@@ -41,7 +41,7 @@ class MediaSection extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.white.withValues(alpha: 0.8),
                     shape: BoxShape.circle,
                     border: Border.all(color: Colors.black, width: 1.5),
                   ),

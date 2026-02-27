@@ -45,7 +45,7 @@ class SlamGridWrapper extends StatelessWidget {
         Positioned.fill(
           child: CustomPaint(
             painter: GridPainter(
-              gridColor: meshColor ?? Colors.black.withOpacity(0.05),
+              gridColor: meshColor ?? Colors.black.withValues(alpha: 0.05),
               spacing: spacing,
             ),
           ),
