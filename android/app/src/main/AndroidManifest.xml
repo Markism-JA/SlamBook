@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="advmobprog_prelims_tp02_amarille"
+        android:label="advmobprog_midterms_tp02_amarille"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
